@@ -1,0 +1,7 @@
+node_modules/
+
+.clasp.json
+.env
+
+build/index.html
+build/main.js
