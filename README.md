@@ -32,10 +32,8 @@ clasp login
 mv .clasp.example.json .clasp.json
 ```
 
-`.clasp.json`の`scriptId`を自身のAppScriptのIDで書き換えてください。
-
-※ AppScriptのIDはAppScript管理画面のプロジェクト設定から確認できます。
-
+`.clasp.json`の`scriptId`を自身のAppScriptのIDで書き換えてください。  
+※ AppScriptのIDはAppScript管理画面のプロジェクト設定から確認できます。  
 ※ **フォーム**のAppScript IDではなく**スプレッドシート**のAppScript IDです。
 
 ```json
@@ -58,9 +56,38 @@ SLACK_WEBHOOK_URL="https://hooks.slack.com/services/*************************"
 
 #### GASのスクリプトプロパティに設定する場合
 
-プロジェクトのダッシュボードから設定しください。
-
+プロジェクトのダッシュボードから設定しください。  
 「プロジェクトの設定」>「スクリプトプロパティの追加」
+
+### スコープの設定
+
+`build/appsscript.json`を編集して使いたいスコープを指定してください。
+
+```json
+{
+  "timeZone": "Asia/Tokyo",
+  "dependencies": {},
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/spreadsheets.currentonly",
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/gmail.send",
+    "https://www.googleapis.com/auth/gmail.compose",
+    "https://www.googleapis.com/auth/script.external_request",
+    "https://www.googleapis.com/auth/script.scriptapp",
+    "https://www.googleapis.com/auth/forms.currentonly",
+    "https://www.googleapis.com/auth/forms",
+    "https://www.googleapis.com/auth/script.container.ui"
+  ]
+}
+```
+
+### Template
+
+HtmlServiceのテンプレート機能を使いたい場合は`/static`ディレクトリ下に任意のhtmlファイルを置いてください。  
+claspのデフォルトの設定ではpushするファイルの明示的な指定が必要です`.claspignore`に作成したファイル名を追記してください。  
+Tailwind CSSのスタイリングを適用するためにテンプレートファイルのhead内で`global.css`を読み込んでください。
 
 ### Build
 
@@ -76,17 +103,12 @@ npm run push
 
 ### Trigger Setting
 
-GASのダッシュボードからトリガーを設定してください。
-
-`config.ts`で`trigger`を設定している場合、`main`関数が実行されると自動的に各関数のトリガーが設定されます。
-
-「エディター」>「`main.gs`」>「プルダウンメニューから`main`関数を選択」>「実行」
-
-初回実行時はアプリを承認する必要があります。
-
-「ポップアップ中の詳細をクリック」>「元のページへ戻るをクリック」
-
-ローカルのターミナルから実行する場合（claspの設定によっては失敗する可能性があります）
+GASのダッシュボードからトリガーを設定してください。  
+`config.ts`で`trigger`を設定している場合、`main`関数が実行されると自動的に各関数のトリガーが設定されます。  
+「エディター」>「`main.gs`」>「プルダウンメニューから`main`関数を選択」>「実行」  
+初回実行時はアプリを承認する必要があります。  
+「ポップアップ中の詳細をクリック」>「元のページへ戻るをクリック」  
+ローカルのターミナルから実行する場合（claspの設定によっては失敗する可能性があります）  
 
 ```shell
 npm run set-triggers
