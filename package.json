@@ -4,15 +4,15 @@
   "description": "GAS template with clasp and esbuild",
   "main": "index.js",
   "scripts": {
-    "build":"pnpm tailwind && pnpm bundle",
+    "build": "pnpm tailwind && pnpm bundle",
     "bundle": "node build",
     "push": "clasp push",
     "set-triggers": "clasp run main",
     "reset-triggers": "clasp run resetTriggers",
-    "lint": "prettier 'src/**/*.ts' && eslint 'src/**/*.ts'",
-    "lint:fix": "prettier --write 'src/**/*.ts' && eslint --fix 'src/**/*.ts'",
-    "tailwind":"npx tailwindcss -i ./src/styles/global.css -o ./static/global.css",
-    "tailwind:watch":"npx tailwindcss -i ./src/styles/global.css -o ./static/global.css --watch"
+    "lint": "prettier '{src,static}/**/*.{js,ts,html}' && eslint '{src,static}/**/*.{js,ts,html}'",
+    "lint:fix": "prettier --write '{src,static}/**/*.{js,ts,html}' && eslint --fix '{src,static}/**/*.{js,ts,html}'",
+    "tailwind": "npx tailwindcss -i ./src/styles/global.css -o ./static/global.css --minify",
+    "tailwind:watch": "npx tailwindcss -i ./src/styles/global.css -o ./static/global.css --watch"
   },
   "author": {
     "name": "Pandashark",
@@ -33,6 +33,9 @@
     "eslint": "8.27.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-simple-import-sort": "8.0.0",
+    "eslint-plugin-sort-destructure-keys": "1.4.0",
+    "eslint-plugin-sort-keys-fix": "1.1.2",
+    "eslint-plugin-tailwindcss": "3.6.2",
     "prettier": "2.7.1",
     "tailwindcss": "3.2.3",
     "typescript": "4.8.4"

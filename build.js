@@ -35,10 +35,7 @@ const buildOptions = {
     DEBUG: debug,
     // Replace `process.env.FOO` with variables written in `.env` file
     ...Object.fromEntries(
-      Object.entries(loadedEnvs ?? {}).map(([key, value]) => [
-        `process.env.${key}`,
-        JSON.stringify(value),
-      ])
+      Object.entries(loadedEnvs ?? {}).map(([key, value]) => [`process.env.${key}`, JSON.stringify(value)])
     ),
   },
   outfile: "./build/main.js",
@@ -51,7 +48,7 @@ const buildOptions = {
     copy({
       resolveFrom: "cwd",
       assets: {
-        from: ["./static/*"],
+        from: ["./static/**/*.{html,css}"],
         to: ["./build"],
       },
     }),

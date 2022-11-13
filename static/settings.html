@@ -3,10 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <base target="_top" />
-    <link
-      href="./global.css"
-      rel="stylesheet"
-    />
+    <link href="./global.css" rel="stylesheet" />
     <script>
       const forms = document.querySelectorAll("form");
 
@@ -22,36 +19,31 @@
       window.addEventListener("load", preventFormSubmit);
 
       function onSuccess() {
-        alert("Saved successfully")
+        alert("Saved successfully");
       }
 
       function handleSubmit(formObject) {
-        google.script.run
-          .withSuccessHandler(onSuccess)
-          .saveProperties(formObject);
+        google.script.run.withSuccessHandler(onSuccess).saveProperties(formObject);
       }
     </script>
-
   </head>
   <body>
-    <div id="form">
+    <div id="form" class="w-full p-8">
       <form id="form" onsubmit="handleSubmit(this)">
-        <div class="form-group">
-          <div class="form-group-header">
-            <label for="slack_webhook_url">Slack Webhook URL</label>
-          </div>
-          <div class="form-group-body">
-            <input
-              class="form-control input-block"
-              type="text"
-              id="slack_webhook_url"
-              name="slack_webhook_url"
-              value="<?= settings.slack_webhook_url ?>"
-            />
-          </div>
+        <div class="flex flex-col space-y-2">
+          <label for="slack_webhook_url" class="text-lg font-bold">Slack Webhook URL</label>
+          <input
+            class="p-2 rounded-md bg-gray-300 w-full"
+            type="text"
+            id="slack_webhook_url"
+            name="slack_webhook_url"
+            value="<?= settings.slack_webhook_url ?>"
+          />
         </div>
-        <div class="form-actions">
-          <button class="btn btn-primary" type="submit">Save</button>
+        <div class="flex mt-4 justify-end">
+          <button class="rounded-md px-2 py-1 bg-green-600 text-white place-self-end justify-self-end" type="submit">
+            Save
+          </button>
         </div>
       </form>
     </div>

@@ -3,7 +3,7 @@
  * @see https://developers.google.com/apps-script/reference/script/form-trigger-builder
  */
 
-import { getSpreadsheet } from "@/lib/gas";
+import { getSpreadsheet } from "@/lib/sheet";
 import type { TimeBasedEvent } from "@/types";
 
 const setOnFormSubmitTrigger = (fn: string) => {

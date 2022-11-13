@@ -1,4 +1,4 @@
-import { getProperties } from "@/core/property";
+import { getProperties } from "@/lib/property";
 
 import { getEnv } from "./env";
 

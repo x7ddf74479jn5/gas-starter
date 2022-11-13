@@ -3,5 +3,6 @@ node_modules/
 .clasp.json
 .env
 
-build/index.html
 build/main.js
+build/global.css
+build/settings.html

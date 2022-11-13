@@ -17,3 +17,8 @@ export function saveProperties(formObj: Record<string, string>) {
     EXAMPLE: example,
   });
 }
+
+export function registerMenu() {
+  const ui = SpreadsheetApp.getUi();
+  ui.createMenu("🎈 Menu").addItem("Settings", "openSettings").addToUi();
+}

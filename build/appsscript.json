@@ -11,6 +11,7 @@
     "https://www.googleapis.com/auth/script.external_request",
     "https://www.googleapis.com/auth/script.scriptapp",
     "https://www.googleapis.com/auth/forms.currentonly",
-    "https://www.googleapis.com/auth/forms"
+    "https://www.googleapis.com/auth/forms",
+    "https://www.googleapis.com/auth/script.container.ui"
   ]
 }
