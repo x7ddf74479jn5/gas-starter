@@ -61,7 +61,7 @@ SLACK_WEBHOOK_URL="https://hooks.slack.com/services/*************************"
 
 ### スコープの設定
 
-`build/appsscript.json`を編集して使いたいスコープを指定してください。
+`static/appsscript.json`を編集して使いたいスコープを指定してください。
 
 ```json
 {
