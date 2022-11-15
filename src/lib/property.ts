@@ -1,24 +1,20 @@
-export const getProperties = () => {
-  const scriptProperties = PropertiesService.getScriptProperties();
-  return scriptProperties.getProperties();
+export function savePropertiesFromForm(formObj: Record<string, string>) {
+  const { setMany } = useProperty();
+  setMany(formObj);
+}
+
+export const useProperty = (prop: GoogleAppsScript.Properties.Properties = PropertiesService.getScriptProperties()) => {
+  return {
+    set: (key: string, value: string) => prop.setProperty(key, value),
+    setMany: (obj: Record<string, string>) => prop.setProperties(obj),
+    get: (key: string) => prop.getProperty(key),
+    getAll: () => prop.getProperties(),
+    delete: (key: string) => prop.deleteProperty(key),
+  };
 };
 
-export function openSettings() {
-  const template = HtmlService.createTemplateFromFile("settings");
-  template.settings = getProperties();
-  const html = template.evaluate().setWidth(500).setHeight(400);
-  SpreadsheetApp.getUi().showModalDialog(html, "Settings");
-}
-
-export function saveProperties(formObj: Record<string, string>) {
-  const scriptProperties = PropertiesService.getScriptProperties();
-  const { example } = formObj;
-  scriptProperties.setProperties({
-    EXAMPLE: example,
-  });
-}
-
-export function registerMenu() {
-  const ui = SpreadsheetApp.getUi();
-  ui.createMenu("🎈 Menu").addItem("Settings", "openSettings").addToUi();
-}
+// Usage
+// const prop = properties();
+// prop.set("EXAMPLE_KEY", "hoge");
+// prop.get("EXAMPLE_KEY"); // => 'hoge'
+// prop.delete("EXAMPLE_KEY");

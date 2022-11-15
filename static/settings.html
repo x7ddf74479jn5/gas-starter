@@ -23,7 +23,7 @@
       }
 
       function handleSubmit(formObject) {
-        google.script.run.withSuccessHandler(onSuccess).saveProperties(formObject);
+        google.script.run.withSuccessHandler(onSuccess).savePropertiesFromForm(formObject);
       }
     </script>
   </head>
@@ -37,7 +37,7 @@
             type="text"
             id="slack_webhook_url"
             name="slack_webhook_url"
-            value="<?= settings.slack_webhook_url ?>"
+            value="<?= props.slack_webhook_url ?>"
           />
         </div>
         <div class="flex mt-4 justify-end">

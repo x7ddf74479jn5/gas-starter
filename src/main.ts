@@ -22,8 +22,8 @@ global.main = main;
 // @ts-expect-error
 global.onOpen = Hook.onOpen;
 // @ts-expect-error
-global.openSettings = Hook.openSettings;
+global.registerMenu = Hook.registerMenu;
 // @ts-expect-error
-global.saveProperties = Hook.saveProperties;
+global.savePropertiesFromForm = Hook.savePropertiesFromForm;
 // @ts-expect-error
 global.resetTriggers = Trigger.resetTriggers;
