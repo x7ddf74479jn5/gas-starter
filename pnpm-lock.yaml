@@ -10,7 +10,7 @@ specifiers:
   esbuild-plugin-copy: 2.0.2
   eslint: 8.33.0
   eslint-config-prettier: 8.6.0
-  eslint-plugin-simple-import-sort: 9.0.0
+  eslint-plugin-simple-import-sort: 10.0.0
   eslint-plugin-sort-destructure-keys: 1.4.0
   eslint-plugin-sort-keys-fix: 1.1.2
   eslint-plugin-tailwindcss: 3.8.2
@@ -28,7 +28,7 @@ devDependencies:
   esbuild-plugin-copy: 2.0.2_esbuild@0.17.5
   eslint: 8.33.0
   eslint-config-prettier: 8.6.0_eslint@8.33.0
-  eslint-plugin-simple-import-sort: 9.0.0_eslint@8.33.0
+  eslint-plugin-simple-import-sort: 10.0.0_eslint@8.33.0
   eslint-plugin-sort-destructure-keys: 1.4.0_eslint@8.33.0
   eslint-plugin-sort-keys-fix: 1.1.2
   eslint-plugin-tailwindcss: 3.8.2_svclfyfvv35ihxztnzlpnxucp4
@@ -751,8 +751,8 @@ packages:
       eslint: 8.33.0
     dev: true
 
-  /eslint-plugin-simple-import-sort/9.0.0_eslint@8.33.0:
-    resolution: {integrity: sha512-PtrLjyXP8kjRneWT1n0b99y/2Fyup37we7FVoWsI61/O7x4ztLohzhep/pxI/cYlECr/cQ2j6utckdvWpVwXNA==}
+  /eslint-plugin-simple-import-sort/10.0.0_eslint@8.33.0:
+    resolution: {integrity: sha512-AeTvO9UCMSNzIHRkg8S6c3RPy5YEwKWSQPx3DYghLedo2ZQxowPFLGDN1AZ2evfg6r6mjBSZSLxLFsWSu3acsw==}
     peerDependencies:
       eslint: '>=5.0.0'
     dependencies:
