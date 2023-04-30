@@ -265,8 +265,8 @@ packages:
       eslint-visitor-keys: 3.4.0
     dev: true
 
-  /@eslint-community/regexpp@4.5.0:
-    resolution: {integrity: sha512-vITaYzIcNmjn5tF5uxcZ/ft7/RXGrMUIS9HalWckEOF6ESiwXKoMzAQf2UW0aVd6rnOeExTJVd5hmWXucBKGXQ==}
+  /@eslint-community/regexpp@4.5.1:
+    resolution: {integrity: sha512-Z5ba73P98O1KUYCCJTUeVpja9RcGoMdncZ6T49FCUl2lN38JtCJ+3WgIDBv0AuY4WChU5PmtJmOCTlN6FZTFKQ==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
     dev: true
 
@@ -390,7 +390,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@eslint-community/regexpp': 4.5.0
+      '@eslint-community/regexpp': 4.5.1
       '@typescript-eslint/parser': 5.59.1(eslint@8.39.0)(typescript@5.0.4)
       '@typescript-eslint/scope-manager': 5.59.1
       '@typescript-eslint/type-utils': 5.59.1(eslint@8.39.0)(typescript@5.0.4)
@@ -720,7 +720,7 @@ packages:
   /esbuild-gas-plugin@0.5.0:
     resolution: {integrity: sha512-Htm2G+j38LBahajYndPSbC2zhJBqURA7+HzdRorMUF0Ezxb0Ku8KRY5A7QU/iq4CK9idtuWe/42kJ9dXMjtf4w==}
     dependencies:
-      gas-entry-generator: 2.4.0
+      gas-entry-generator: 2.5.1
     dev: true
 
   /esbuild-plugin-copy@2.1.1(esbuild@0.17.18):
@@ -863,7 +863,7 @@ packages:
     hasBin: true
     dependencies:
       '@eslint-community/eslint-utils': 4.4.0(eslint@8.39.0)
-      '@eslint-community/regexpp': 4.5.0
+      '@eslint-community/regexpp': 4.5.1
       '@eslint/eslintrc': 2.0.2
       '@eslint/js': 8.39.0
       '@humanwhocodes/config-array': 0.11.8
@@ -1053,8 +1053,8 @@ packages:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
     dev: true
 
-  /gas-entry-generator@2.4.0:
-    resolution: {integrity: sha512-ZHWB5TcmWLxqaA3hprmgl7UF8eacoaCdRYNKfo0sqre+IV8CvrfrrQDl3uWcrFWtQhJKIFgSRXCI9g6F91FESg==}
+  /gas-entry-generator@2.5.1:
+    resolution: {integrity: sha512-grd9Qvbm8AgyoDlUCKsbLpPVBFQm+Giv/7xmcINLSQfCELIxg6Cb/C2bOYfqZFjWhsGYwU2ZrWy3mt2XtWjHKA==}
     dependencies:
       escodegen: 2.0.0
       esprima-next: 5.8.4
@@ -1479,11 +1479,11 @@ packages:
       postcss: ^8.2.14
     dependencies:
       postcss: 8.4.23
-      postcss-selector-parser: 6.0.11
+      postcss-selector-parser: 6.0.12
     dev: true
 
-  /postcss-selector-parser@6.0.11:
-    resolution: {integrity: sha512-zbARubNdogI9j7WY4nQJBiNqQf3sLS3wCP4WfOidu+p28LofJqDH1tcXypGrcmMHhDk2t9wGhCsYe/+szLTy1g==}
+  /postcss-selector-parser@6.0.12:
+    resolution: {integrity: sha512-NdxGCAZdRrwVI1sy59+Wzrh+pMMHxapGnpfenDVlMEXoOcvt4pGE0JLK9YY2F5dLxcFYA/YbVQKhcGU+FtSYQg==}
     engines: {node: '>=4'}
     dependencies:
       cssesc: 3.0.0
@@ -1677,7 +1677,7 @@ packages:
       postcss-js: 4.0.1(postcss@8.4.23)
       postcss-load-config: 4.0.1(postcss@8.4.23)
       postcss-nested: 6.0.1(postcss@8.4.23)
-      postcss-selector-parser: 6.0.11
+      postcss-selector-parser: 6.0.12
       postcss-value-parser: 4.2.0
       resolve: 1.22.2
       sucrase: 3.32.0
