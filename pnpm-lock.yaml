@@ -1167,8 +1167,8 @@ packages:
       binary-extensions: 2.2.0
     dev: true
 
-  /is-core-module@2.12.1:
-    resolution: {integrity: sha512-Q4ZuBAe2FUsKtyQJoQHlvP8OvBERxO3jEmy1I7hcRXcJBGGHFh/aJBswbXuS9sgrDH2QUO8ilkwNPHvHMd8clg==}
+  /is-core-module@2.13.0:
+    resolution: {integrity: sha512-Z7dk6Qo8pOCp3l4tsX2C5ZVas4V+UxwQodwZhLopL91TX8UyyHEXafPcyoeeWuLrwzHcr3igO78wNLwHJHsMCQ==}
     dependencies:
       has: 1.0.3
     dev: true
@@ -1433,7 +1433,7 @@ packages:
       postcss: 8.4.27
       postcss-value-parser: 4.2.0
       read-cache: 1.0.0
-      resolve: 1.22.2
+      resolve: 1.22.4
     dev: true
 
   /postcss-js@4.0.1(postcss@8.4.27):
@@ -1542,11 +1542,11 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /resolve@1.22.2:
-    resolution: {integrity: sha512-Sb+mjNHOULsBv818T40qSPeRiuWLyaGMa5ewydRLFimneixmVy2zdivRl+AF6jaYPC8ERxGDmFSiqui6SfPd+g==}
+  /resolve@1.22.4:
+    resolution: {integrity: sha512-PXNdCiPqDqeUou+w1C2eTQbNfxKSuMxqTCuvlmmMsk1NWHL5fRrhY6Pl0qEYYc6+QqGClco1Qj8XnjPego4wfg==}
     hasBin: true
     dependencies:
-      is-core-module: 2.12.1
+      is-core-module: 2.13.0
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
     dev: true
@@ -1669,7 +1669,7 @@ packages:
       postcss-load-config: 4.0.1(postcss@8.4.27)
       postcss-nested: 6.0.1(postcss@8.4.27)
       postcss-selector-parser: 6.0.13
-      resolve: 1.22.2
+      resolve: 1.22.4
       sucrase: 3.34.0
     transitivePeerDependencies:
       - ts-node
